@@ -18,7 +18,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         super.viewDidLoad()
         
         // Background Color
-            self.view.backgroundColor = .purple
+        self.view.backgroundColor = .purple
         
         // State Picker
         let UIPicker: UIPickerView = UIPickerView()
@@ -43,10 +43,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 return stateArray.count
             }
            
-    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString?
+        func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString?
             {
                 // Return statement allows attributes to be assigned to the string values of the picker
-                return NSAttributedString(string: stateArray[row], attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+                return NSAttributedString(
+                    string: stateArray[row],
+                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.white]
+                )
                 
                 // This is old code that previously defaulted picker color to black.
                 //let row = stateArray[row]
