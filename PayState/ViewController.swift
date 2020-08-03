@@ -43,11 +43,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         // State Picker
         let UIPicker: UIPickerView = UIPickerView()
-        
-        UIPicker.delegate = self as UIPickerViewDelegate
-        UIPicker.dataSource = self as UIPickerViewDataSource
-        self.view.addSubview(UIPicker)
-        UIPicker.center = self.view.center
+            UIPicker.delegate = self as UIPickerViewDelegate
+            UIPicker.dataSource = self as UIPickerViewDataSource
+            self.view.addSubview(UIPicker)
+            UIPicker.center = CGPoint(x: self.view.frame.width/2, y: 500)
         
         
         // Do any additional setup after loading the view.
