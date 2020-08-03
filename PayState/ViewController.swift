@@ -47,6 +47,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             UIPicker.dataSource = self as UIPickerViewDataSource
             self.view.addSubview(UIPicker)
             UIPicker.center = CGPoint(x: self.view.frame.width/2, y: 500)
+            
+        // State Picker Selection (Button)
+            let statePick = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
+            statePick.backgroundColor = .purple
+            statePick.setTitle("Next", for: .normal) 
+            statePick.addTarget(self, action: Selector(("Action:")), for: UIControl.Event.touchUpInside)
+            statePick.center = CGPoint(x: self.view.frame.width/2, y: 700)
+            self.view.addSubview(statePick)
+            
         
         
         // Do any additional setup after loading the view.
