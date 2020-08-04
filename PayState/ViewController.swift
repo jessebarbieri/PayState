@@ -25,9 +25,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             titleLabel.center = CGPoint(x: self.view.frame.width/2, y: 200)
             titleLabel.textAlignment = .center
             titleLabel.numberOfLines = 3
-            titleLabel.text = "Welcome \nto \nPayState"
+            titleLabel.text = "PayState"
             titleLabel.textColor = .white
-            titleLabel.font = UIFont(name: "HelveticaNeue-BoldItalic", size: 40.0)
+            titleLabel.font = UIFont(name: "Verdana-Bold", size: 50.0)
             self.view.addSubview(titleLabel)
             
         // Instructions (Label)
@@ -51,7 +51,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         // State Picker Selection (Button)
             let statePick = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
             statePick.backgroundColor = .purple
-            statePick.setTitle("Next", for: .normal) 
+            statePick.setTitle("Next", for: .normal)
             statePick.addTarget(self, action: Selector(("Action:")), for: UIControl.Event.touchUpInside)
             statePick.center = CGPoint(x: self.view.frame.width/2, y: 700)
             self.view.addSubview(statePick)
