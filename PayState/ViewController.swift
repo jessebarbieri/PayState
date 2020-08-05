@@ -12,6 +12,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 {
         // State Array for UIPicker
         let stateArray = ["Alabama", "Alaska", "Arizona", "Arkansas","California","Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine" , "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada","New Jersey","New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
+    
 
         override func viewDidLoad()
         {
@@ -40,14 +41,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             instrLabel.font = UIFont(name: "HelveticaNeue-Medium", size: 20.0)
             self.view.addSubview(instrLabel)
         
-        
+    
         // State Picker
         let UIPicker: UIPickerView = UIPickerView()
             UIPicker.delegate = self as UIPickerViewDelegate
             UIPicker.dataSource = self as UIPickerViewDataSource
             self.view.addSubview(UIPicker)
             UIPicker.center = CGPoint(x: self.view.frame.width/2, y: 500)
-        
             
         // State Picker Selection (Button)
         let statePick = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
@@ -57,11 +57,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             statePick.addTarget(self, action:#selector(stateSelected(_ :)), for: .touchUpInside)
             self.view.addSubview(statePick)
     
+        
         // Do any additional setup after loading the view.
         }
-        
+    
         @objc func stateSelected(_ sender:UIButton){
-           print ("You've hit next")
+        print ("You've hit next")
+        // UIPicker.removeFromSuperview()
         }
         
         // State Picker Functionality
@@ -87,8 +89,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 //let row = stateArray[row]
                 // return row
             }
-        func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
+        //func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
         
         
-        }}
+        }
 
