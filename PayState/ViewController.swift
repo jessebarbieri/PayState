@@ -21,7 +21,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         super.viewDidLoad()
         
         // Background Color
-        self.view.backgroundColor = .purple
+            self.view.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1)
             
         // App Title (Label)
         let titleLabel = UILabel(frame: CGRect(x: 100, y: 200, width: 300, height: 500))
@@ -54,7 +54,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
         // State Picker Selection (Button)
         let statePick = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
-            statePick.backgroundColor = .purple
+            statePick.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1)
             statePick.setTitle("Next", for: .normal)
             statePick.center = CGPoint(x: self.view.frame.width/2, y: 700)
             statePick.addTarget(self, action:#selector(stateSelected(_ :)), for: .touchUpInside)
