@@ -66,7 +66,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
         @objc func stateSelected(_ sender:UIButton){
             print ("You've hit next")
-            UIView.animate(withDuration: 1, animations: {self.statePicker.alpha = 0})
+            UIView.animate(withDuration: 0.5, animations: {self.statePicker.alpha = 0})
             { _ in self.statePicker.removeFromSuperview()}
         
         }
