@@ -13,6 +13,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         // State Array for UIPicker
         let stateArray = ["Alabama", "Alaska", "Arizona", "Arkansas","California","Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine" , "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada","New Jersey","New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
         
+        // Assigned statePicker variable
         var statePicker = UIPickerView()
     
 
@@ -21,7 +22,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         super.viewDidLoad()
         
         // Background Color
-            self.view.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1)
+        self.view.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1)
             
         // App Title (Label)
         let titleLabel = UILabel(frame: CGRect(x: 100, y: 200, width: 300, height: 500))
@@ -45,10 +46,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
     
         // State Picker
-        //let statePicker: UIPickerView = UIPickerView()
-            statePicker.delegate = self as UIPickerViewDelegate
-            statePicker.dataSource = self as UIPickerViewDataSource
-            statePicker.center = CGPoint(x: self.view.frame.width/2, y: 500)
+        statePicker.delegate = self as UIPickerViewDelegate
+        statePicker.dataSource = self as UIPickerViewDataSource
+        statePicker.center = CGPoint(x: self.view.frame.width/2, y: 500)
         self.view.addSubview(statePicker)
             
             
@@ -65,7 +65,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
     
         @objc func stateSelected(_ sender:UIButton){
-            print ("You've hit next")
             UIView.animate(withDuration: 0.5, animations: {self.statePicker.alpha = 0})
             { _ in self.statePicker.removeFromSuperview()}
         
@@ -90,12 +89,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                     attributes: [NSAttributedString.Key.foregroundColor: UIColor.white]
                 )
                 
-                // This is old code that previously defaulted picker color to black.
-                //let row = stateArray[row]
-                // return row
             }
         
-    //func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
+        //func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
         
         
         }
